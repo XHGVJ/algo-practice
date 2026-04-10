@@ -1,0 +1,22 @@
+name: Algo Practice CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Run algorithm tests
+      run: |
+        echo "Running algorithm practice test suite..."
+        # Add pytest or other test runners if needed
+
